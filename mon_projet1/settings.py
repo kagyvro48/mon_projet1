@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*9#&(w^jy@!a--afnuds-!ftcueafho=24+fq*wawzuf4#15m*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -73,10 +73,17 @@ WSGI_APPLICATION = 'mon_projet1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'ffefd6CBgea6afE*ac66G41g3-b-gGDC',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '12901',
     }
 }
 
